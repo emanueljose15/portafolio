@@ -1,0 +1,325 @@
+* {
+    box-sizing: border-box;
+}
+/* Incluye bordes y rellenos dentro del ancho de cada elemento. */
+
+html {
+    scroll-behavior: smooth;
+}
+/* Hace que los enlaces internos se desplacen suavemente hacia las secciones. */
+
+body {
+    min-width: 280px;
+    margin: 0;
+    overflow-x: hidden;
+}
+/* Define el ancho minimo del sitio, elimina margenes y evita desplazamientos horizontales. */
+
+header,
+nav,
+main {
+    width: min(100% - 32px, 1100px);
+    margin-inline: auto;
+}
+/* Centra las zonas principales y limita su ancho en pantallas grandes. */
+
+header {
+    padding: 24px 8px 12px;
+    text-align: center;
+}
+/* Separa el titulo superior y lo muestra centrado. */
+
+header h1 {
+    line-height: 1.25;
+}
+/* Mejora la separacion entre las lineas del titulo principal. */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    background-color: #f7f6f1;
+    border: solid #807373;
+    border-radius: 8px;
+}
+/* Mantiene el menu visible al subir o bajar y centra sus opciones. */
+
+nav ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/* Convierte las opciones en una fila flexible que puede dividirse. */
+
+nav a {
+    display: block;
+    min-height: 44px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    text-align: center;
+}
+/* Aumenta el area tocable y facilita la seleccion del enlace. */
+
+main {
+    padding: 18px 0 40px;
+}
+/* Agrega espacio alrededor del contenido principal. */
+
+section {
+    margin: 16px 0;
+    padding: clamp(16px, 3vw, 28px);
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+/* Separa y delimita cada seccion con relleno adaptable. */
+
+.perfil-sobre-mi {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+/* Ubica la foto y el texto de presentacion en una misma fila. */
+
+.foto-perfil {
+    width: clamp(90px, 12vw, 150px);
+    aspect-ratio: 1;
+    flex: 0 0 auto;
+    border: 3px solid #807373;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/* Hace que la fotografia sea cuadrada, circular y adaptable. */
+
+.perfil-sobre-mi span {
+    min-width: 0;
+    line-height: 1.6;
+}
+/* Permite que el texto se ajuste sin desbordarse. */
+
+.lista-habilidades {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px 24px;
+    padding-left: 20px;
+}
+/* Organiza cada lista de habilidades en dos columnas. */
+
+.texto {
+    max-width: 850px;
+    line-height: 1.6;
+}
+/* Limita el ancho de los textos y mejora la lectura. */
+
+.boton {
+    max-width: 100%;
+    min-height: 44px;
+    padding: 10px 18px;
+    border: 1px solid #807373;
+    border-radius: 6px;
+    cursor: pointer;
+}
+/* Da al boton un tamano comodo y evita que desborde. */
+
+img,
+video,
+canvas {
+    max-width: 100%;
+}
+/* Impide que los elementos visuales sean mas anchos que su contenedor. */
+
+#experiencia-laboral {
+    overflow-x: auto;
+}
+/* Permite desplazar la tabla cuando el espacio no alcanza. */
+
+table {
+    width: 100%;
+    min-width: 700px;
+    border-collapse: collapse;
+}
+/* Mantiene una tabla completa con ancho minimo legible. */
+
+table td,
+table th {
+    padding: 10px;
+    border: solid #807373;
+    vertical-align: top;
+}
+/* Separa el contenido interno y agrega bordes a las celdas. */
+
+.contacto-linea,
+#contactos > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow-wrap: anywhere;
+}
+/* Mantiene iconos y datos de contacto alineados y ajustables. */
+
+@media (max-width: 900px) {
+    header,
+    nav,
+    main {
+        width: min(100% - 24px, 1100px);
+    }
+    /* Reduce los margenes laterales en tabletas. */
+
+    nav ul {
+        row-gap: 4px;
+    }
+    /* Compacta el espacio vertical del menu cuando se divide. */
+
+    table {
+        min-width: 620px;
+    }
+    /* Reduce ligeramente el ancho minimo de la tabla. */
+}
+
+@media (max-width: 600px) {
+    header,
+    nav,
+    main {
+        width: calc(100% - 16px);
+    }
+    /* Ocupa casi todo el ancho disponible en telefonos. */
+
+    header {
+        padding-top: 16px;
+    }
+    /* Reduce el espacio superior del encabezado. */
+
+    header h1 {
+        font-size: clamp(20px, 7vw, 28px);
+    }
+    /* Ajusta el titulo segun el ancho del telefono. */
+
+    nav {
+        position: relative;
+        top: auto;
+        padding: 6px;
+    }
+    /* Evita que el menu fijo ocupe demasiado espacio en pantalla pequeña. */
+
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4px;
+    }
+    /* Presenta el menu en dos columnas. */
+
+    nav li,
+    nav a {
+        width: 100%;
+    }
+    /* Hace que cada opcion ocupe toda su columna. */
+
+    nav a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+    }
+    /* Centra vertical y horizontalmente el texto del menu. */
+
+    nav a:hover {
+        font-size: 13px;
+    }
+    /* Evita que el texto crezca al pasar el cursor en dispositivos tactiles. */
+
+    section {
+        padding: 14px;
+    }
+    /* Reduce el relleno de las secciones para ganar espacio. */
+
+    .perfil-sobre-mi {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    /* Coloca la foto encima del texto en telefonos. */
+
+    .foto-perfil {
+        width: 110px;
+    }
+    /* Define un tamano apropiado para la fotografia movil. */
+
+    .lista-habilidades {
+        grid-template-columns: 1fr;
+    }
+    /* Muestra cada habilidad en una sola columna. */
+
+    .boton {
+        width: 100%;
+    }
+    /* Hace que los botones ocupen todo el ancho disponible. */
+
+    table {
+        display: block;
+        min-width: 0;
+    }
+    /* Permite que la tabla se reorganice sin mantener un ancho fijo. */
+
+    table tr {
+        display: grid;
+        grid-template-columns: 1fr;
+        line-height: 1.5;
+        margin-bottom: 12px;
+    }
+    /* Convierte cada fila en un bloque vertical. */
+
+    table th,
+    table td {
+        display: block;
+        width: 100%;
+    }
+    /* Hace que encabezados y celdas ocupen una linea completa. */
+
+    table tr:nth-child(2) {
+        display: none;
+    }
+    /* Oculta los encabezados de columnas porque se agregaran nombres en cada celda. */
+
+    table td::before {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: bold;
+    }
+    /* Convierte el texto antes de cada dato en una etiqueta visible. */
+
+    table td:nth-child(1)::before {
+        content: "Puesto";
+    }
+    /* Identifica el primer dato como puesto. */
+
+    table td:nth-child(2)::before {
+        content: "Lugar";
+    }
+    /* Identifica el segundo dato como lugar. */
+
+    table td:nth-child(3)::before {
+        content: "Responsabilidades";
+    }
+    /* Identifica el tercer dato como responsabilidades. */
+
+    table td:nth-child(4)::before {
+        content: "Tiempo";
+    }
+    /* Identifica el cuarto dato como tiempo. */
+}
+
+@media (max-width: 360px) {
+    nav ul {
+        grid-template-columns: 1fr;
+    }
+    /* Usa una sola columna para el menu en telefonos muy pequeños. */
+}

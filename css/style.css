@@ -1,0 +1,154 @@
+body {
+    background-color: #f7f6f1;
+    color: #262722;
+    font-family: Arial, verdana, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+header {
+    background-color: #f7f6f1;
+}
+
+nav {
+    background-color: #f7f6f1;
+    border-radius: 8px;
+    border: solid #807373;
+}
+
+nav a {
+    color: #262722;
+    background-color: transparent;
+}
+
+a[href] {
+    text-decoration: none;
+}
+
+a:focus {
+    outline: 2px solid #993333;
+}
+
+section {
+    border-radius: 8px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table tr {
+    line-height: 200%;
+}
+
+table td {
+    border: solid #807373;
+}
+
+table th {
+    border: solid #000000;
+}
+
+.barra td {
+    text-align: center;
+    border: solid #f7f6f1;
+}
+
+.marca {
+    text-align: left;
+}
+
+.barra h1 {
+    font-size: 14px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+.perfil td {
+    border: solid #f7f6f1;
+}
+
+.margen-proyectos {
+    width: 22%;
+}
+
+.centro-proyectos {
+    width: 56%;
+}
+
+.marco-proyectos td {
+    border: solid #f7f6f1;
+}
+
+.proyectos td {
+    background-color: #fff;
+}
+
+.proyectos p {
+    background-color: #fff;
+    border: solid #807373;
+    text-align: center;
+}
+
+.proyectos input[type="text"] {
+    width: 95%;
+}
+
+.proyectos a {
+    color: #262722;
+    background-color: #fff;
+    border: solid #807373;
+}
+
+#inicio a {
+    color: #fff;
+    background-color: #262722;
+    border: solid #262722;
+}
+
+.habilidades td {
+    background-color: #fff;
+}
+
+#sobre-mi p {
+    background-color: #fff;
+    border: solid #807373;
+}
+
+nav a:hover {
+    background-color: #ae9191;
+    font-weight: bold;
+}
+
+#inicio input[type="text"] {
+    background-color: #fff;
+    width: 60%;
+}
+
+#contacto input[type="text"] {
+    background-color: #fff;
+    width: 100%;
+}
+
+#contacto input[type="email"] {
+    background-color: #fff;
+    width: 100%;
+}
+ul a{
+    cursor: pointer;
+}
+.boton {
+  font-family: "Alfa Slab One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
